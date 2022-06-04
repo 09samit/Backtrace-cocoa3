@@ -12,6 +12,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Install dependencies
-        run: sh scripts/install.sh
+        run: swift build
       - name: Run tests
-        run: sh scripts/test.sh
+        run: swift test
