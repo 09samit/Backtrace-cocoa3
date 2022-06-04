@@ -13,9 +13,9 @@ jobs:
     - name: Checkout the code
       uses: actions/checkout@v2
     - name: Show eligible build destinations for Backtrace tvOS
-      run: xcodebuild -showdestinations -scheme Backtrace-tvOS-lib -destination 'platform=tvOS Simulator, OS:15.2, name:Apple TV'
+      run: xcodebuild -showdestinations -scheme Backtrace-tvOS-lib -destination 'platform=tvOS Simulator,OS=15.2,name=Apple TV'
     - name: Build and test ( tvOS 15.0)
-      run: xcodebuild test -scheme Backtrace-tvOS-lib -destination 'platform=tvOS Simulator, OS:15.2, name:Apple TV'
+      run: xcodebuild test -scheme Backtrace-tvOS-lib -destination 'platform=tvOS Simulator,OS=15.2,name=Apple TV'
     - name: Show eligible build destinations for Backtrace iOS
       run: xcodebuild -showdestinations -scheme Backtrace-iOS-lib
     - name: Build and test ( iOS 15.0)
