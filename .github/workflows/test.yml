@@ -12,12 +12,6 @@ jobs:
     steps:
     - name: Checkout the code
       uses: actions/checkout@v2
-    - name: Show eligible build destinations for Backtrace macOS
-      run: xcodebuild -showdestinations -scheme Backtrace-macOS-lib
-    - name: Build and test ( macOS 12.0 Monterey)
-      run: xcodebuild test -scheme Backtrace-macOS-lib -destination 'platform=macOS,arch=x86_64,id=4666018E-420F-C1B5-9525-B145CECA79EB'
-    - name: Build and test ( mac Catalyst 12.0)
-      run: xcodebuild test -scheme Backtrace-macOS-lib -destination 'platform=macOS,arch=x86_64,variant=Mac Catalyst,id=4666018E-420F-C1B5-9525-B145CECA79EB'
     - name: Show eligible build destinations for Backtrace tvOS
       run: xcodebuild -showdestinations -scheme Backtrace-tvOS-lib
     - name: Build and test ( tvOS 15.0)
