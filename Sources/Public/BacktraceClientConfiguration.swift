@@ -10,7 +10,7 @@ import Foundation
 
     /// Database settings.
     @objc public var dbSettings: BacktraceDatabaseSettings = BacktraceDatabaseSettings()
-
+              
     /// Error-free metrics settings
     @objc public var metricsSettings: BacktraceMetricsSettings = BacktraceMetricsSettings()
 
